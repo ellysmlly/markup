@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: helvetica;
+  margin: 0;
+  font-size: 45px;
+}
+
+h1:hover {
+  color: #0000ff;
+}
+
+img {
+  width: 100%;
+}
+
+.im-body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* border: 25px solid grey; */
+}
+
+.im-title-container {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.im-title {
+  width: 33.33%;
+  float: left;
+}
+
+.im-title--left h1 {
+  text-align: left;
+}
+
+.im-title--center h1 {
+  text-align: center;
+}
+
+.im-title--right h1 {
+  text-align: right;
+}
+
+.im-image-container {
+  width: 100%;
+  margin-top: 200px;
+  position: relative;
+  cursor: pointer;
+}
+
+.im-image-container--switch .im-image--1 {
+  opacity: 0;
+}
+
+.im-image-container--switch .im-image--2 {
+  opacity: 1;
+  animation: unset !important;
+}
+
+.im-image-container--switch .im-image--3 {
+  animation: unset !important;
+}
+
+.im-image-container--switch .im-image--4 {
+  animation: unset !important;
+}
+
+.im-image {
+  width: 100%;
+}
+.im-image--1 {
+  opacity: 1;
+}
+
+.im-image--2, .im-image--3, .im-image--4 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes image-2 {
+  0% {
+      opacity: 0;
+  }
+
+  24% {
+      opacity: 0;
+  }
+
+  25% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  51% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.im-image-container--animate .im-image--2 {
+  animation: image-2 3s infinite;
+}
+
+@keyframes image-3 {
+  0% {
+      opacity: 0;
+  }
+
+  49% {
+      opacity: 0;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  75% {
+      opacity: 1;
+  }
+
+  76% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.im-image-container--animate .im-image--3 {
+  animation: image-3 3s infinite;
+}
+
+@keyframes image-4 {
+  0% {
+      opacity: 0;
+  }
+
+  74% {
+      opacity: 0;
+  }
+
+  75% {
+      opacity: 1;
+  }
+
+  99% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.im-image-container--animate .im-image--4 {
+  animation: image-4 3s infinite;
+}
